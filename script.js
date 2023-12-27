@@ -8,8 +8,17 @@ const btn4 = document.querySelector(".btn4");
 
 let correctAnswerIndex = -1;
 
+function resetColours(){
+  // RESET BUTTON STYLING
+  btn1.style.backgroundColor = "rgb(176, 86, 21)";
+  btn2.style.backgroundColor = "rgb(176, 86, 21)";
+  btn3.style.backgroundColor = "rgb(176, 86, 21)";
+  btn4.style.backgroundColor = "rgb(176, 86, 21)";
+}
+
 // Get the question from the API
 async function getQuestion() {
+  resetColours();
   const APIurl = "https://opentdb.com/api.php?amount=1&type=multiple"; // URL for our api
   const result = await fetch(`${APIurl}`); // Attempts to fetch the api data
   const data = await result.json(); // We put the results into a json file
@@ -73,7 +82,6 @@ function checkAnswer(selectedOption) {
     options.style.backgroundColor = "red";
     question.style.backgroundColor = "red";
     setTimeout(() => {
-      correctButton.style.backgroundColor = "rgb(176, 86, 21)";
       // Re-enable all buttons
       enableButtons();
     }, 3000);

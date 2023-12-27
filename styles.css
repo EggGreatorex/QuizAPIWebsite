@@ -16,6 +16,14 @@ button{
   font-family: 'Roboto Mono', monospace;
 }
 
+h2{
+  place-self: center;
+}
+
+h4{
+  place-self: center;
+}
+
 .homeButton{
   position: absolute;
   width: 7vh;
@@ -30,6 +38,7 @@ button{
   color: white;
   display: grid;
   align-items: center;
+  text-align: center;
   justify-content: center;
   background-color: rgb(16, 16, 16);
   border: 1rem solid rgb(233, 141, 89);
@@ -51,6 +60,7 @@ button{
   cursor: pointer;
 }
 
+
 .question{
   place-self: center;
   align-items: center;
@@ -65,6 +75,7 @@ button{
 
 .options{
   place-self: center;
+  text-align: left;
   background-color: rgb(26, 26, 26);
   border-radius: 15px;
   width: 95%;
@@ -84,6 +95,15 @@ button{
 .answer button:hover{
   background-color: rgb(255, 128, 0);
   margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.homeButton:not(hover){
+  transition: all 0.2s ease;
+}
+
+.homeButton:hover{
+  width: 6vh;
   transition: all 0.2s ease;
 }
 

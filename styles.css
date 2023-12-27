@@ -9,10 +9,21 @@ body{
   align-items: center;
   justify-content: center;
   margin: 11vh;
+  caret-color: transparent;
 }
 
 button{
   font-family: 'Roboto Mono', monospace;
+}
+
+.homeButton{
+  position: absolute;
+  width: 7vh;
+  top: 3%;
+  left: 5%;
+  transform: translateX(-50%);
+  user-select: none;
+  cursor: pointer;
 }
 
 .container{
@@ -121,5 +132,46 @@ button{
 
   .answer button{
     width: 75px;
+  }
+
+  .homeButton{
+    position: absolute;
+    width: 5vh;
+    top: 3%;
+    left: 6%;
+    transform: translateX(-50%);
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    font-size: 2vh;
+  }
+  .container {
+    width: 250px;
+    font-size: 1vh;
+  }
+
+  .question{
+    width: 240px;
+    height: 160px;
+    font-size: 2vh;
+  }
+
+  .options{
+    width: 240px;
+    height: 160px;
+    font-size: 2vh;
+  }
+
+  .answer{
+    grid-template-columns: repeat(auto-fit,minmax(50px, 1fr));
+    gap: 8px;
+  }
+
+  .answer button{
+    width: 50px;
   }
 }

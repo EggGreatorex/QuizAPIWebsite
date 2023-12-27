@@ -93,3 +93,10 @@ function enableButtons() {
 document.addEventListener("DOMContentLoaded", function () {
   getQuestion();
 });
+
+
+
+// FUNCTION TO RETURN TO HOME PAGE
+function goHome(){
+  window.location.href = 'index.html';
+};

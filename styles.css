@@ -89,3 +89,37 @@ button{
 .container button:not(hover){
   transition: all 0.2s ease;
 }
+
+
+/* SUPPORTS FOR SMALLER DEVICES */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 2vh;
+  }
+  .container {
+    width: 350px;
+    font-size: 1vh;
+  }
+
+  .question{
+    width: 340px;
+    height: 200px;
+    font-size: 2vh;
+  }
+
+  .options{
+    width: 340px;
+    height: 200px;
+    font-size: 2vh;
+  }
+
+  .answer{
+    grid-template-columns: repeat(auto-fit,minmax(70px, 1fr));
+    gap: 8px;
+  }
+
+  .answer button{
+    width: 75px;
+  }
+}

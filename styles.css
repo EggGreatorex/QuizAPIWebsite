@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+body{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 5vh;
+  background: linear-gradient(to bottom, rgb(186, 104, 45) 50%, rgb(20, 20, 20) 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 11vh;
+}
+
+button{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container{
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(16, 16, 16);
+  border: 1rem solid rgb(233, 141, 89);
+  box-shadow: 2rem;
+  border-radius: 20px;
+  width: 80vh;
+  height: 80vh;
+  user-select: none;
+}
+
+.container button{
+  place-self: center;
+  color: rgb(16, 16, 16);
+  background-color:rgb(176, 86, 21);
+  font-size: 3vh;
+  border-radius: 10px;
+  width: 95%;
+  border: none;
+  cursor: pointer;
+}
+
+.question{
+  place-self: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(26, 26, 26);
+  border-radius: 15px;
+  width: 95%;
+  font-size: 1.8rem;
+  height: 30vh;
+}
+
+.options{
+  place-self: center;
+  background-color: rgb(26, 26, 26);
+  border-radius: 15px;
+  width: 95%;
+  font-size: 1.8rem;
+  height: 30vh;
+  list-style: none;
+}
+
+.answer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.answer button:hover{
+  background-color: rgb(255, 128, 0);
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.answer button:not(hover){
+  transition: all 0.2s ease;
+}
+
+.container button:hover{
+  background-color: rgb(255, 128, 0);
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.container button:not(hover){
+  transition: all 0.2s ease;
+}

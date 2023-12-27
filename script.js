@@ -19,6 +19,7 @@ function resetColours(){
 // Get the question from the API
 async function getQuestion() {
   resetColours();
+  enableButtons();
   const APIurl = "https://opentdb.com/api.php?amount=1&type=multiple"; // URL for our api
   const result = await fetch(`${APIurl}`); // Attempts to fetch the api data
   const data = await result.json(); // We put the results into a json file
@@ -71,20 +72,12 @@ function checkAnswer(selectedOption) {
   if (selectedOption === correctAnswerIndex + 1) {
     options.style.backgroundColor = "green";
     question.style.backgroundColor = "green";
-    setTimeout(() => {
-      // Re-enable all buttons
-      enableButtons();
-    }, 3000);
   } else {
     let correctButton = document.querySelector(`.btn${correctAnswerIndex + 1}`);
     correctButton.style.backgroundColor = "green";
 
     options.style.backgroundColor = "red";
     question.style.backgroundColor = "red";
-    setTimeout(() => {
-      // Re-enable all buttons
-      enableButtons();
-    }, 3000);
   }
 }
 

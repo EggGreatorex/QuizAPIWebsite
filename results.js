@@ -30,5 +30,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // FUNCTION TO START THE GAME AGAIN
 function playAgain(){
-  window.location.href = "trivia.html";
+  window.location.href = "index.html";
 }

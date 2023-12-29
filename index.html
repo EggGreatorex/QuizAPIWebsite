@@ -10,13 +10,25 @@
   <div class="container">
     <h2>Welcome to Trivia</h2> 
     <h3>Answer five questions based on many categories</h3>
+    <p>Select a category</p>
+    <select id="categorySelection">
+      <option value="default" selected>All</option>
+      <option value="Animals">Animals</option>
+      <option value="art">Art</option>
+      <option value="history">History</option>
+      <option value="sports">Sports</option>
+      <!-- Add other options here -->
+    </select>
     <button class="startButton" onclick="startTrivia()">Start</button>
   </div>
 
   <script>
     function startTrivia() {
-      // Navigate to the trivia.html page
-      window.location.href = 'trivia.html';
+      // Get the selected value
+      const selectedCategory = document.getElementById('categorySelection').value;
+
+      // Navigate to the trivia.html page with the selected value as a query parameter
+      window.location.href = `trivia.html?category=${selectedCategory}`;
     }
   </script>
 </body>

@@ -36,11 +36,35 @@ function startRound(){
 };
 
 
+function getApiUrl(){
+  let APIurl = '';
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get('category').toLowerCase();
+  console.log(category)
+
+  if(category === 'default'){
+    url = "https://opentdb.com/api.php?amount=1&type=multiple";
+  } else if(category === 'animals'){
+    url = 'https://opentdb.com/api.php?amount=10&category=27&type=multiple';
+
+  } else if(category === 'art'){
+    url = 'https://opentdb.com/api.php?amount=1&category=25&type=multiple';
+  
+  } else if(category === 'history'){
+    url = 'https://opentdb.com/api.php?amount=1&category=23&type=multiple';
+  
+  } else if(category === 'sports'){
+    url = 'https://opentdb.com/api.php?amount=1&category=21&type=multiple';
+}
+ return url
+};
+
+
 // Get the question from the API
 async function getQuestion() {
   resetColours();
   enableButtons();
-  const APIurl = "https://opentdb.com/api.php?amount=1&type=multiple"; // URL for our api
+  APIurl = getApiUrl();
   const result = await fetch(`${APIurl}`); // Attempts to fetch the api data
   const data = await result.json(); // We put the results into a json file
   displayQuestion(data.results[0]);

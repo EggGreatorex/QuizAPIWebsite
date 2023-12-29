@@ -24,6 +24,22 @@ h4{
   place-self: center;
 }
 
+h3{
+  font-size: 2rem;
+}
+
+#categorySelection{
+  background-color: rgb(16, 16, 16);
+  border-width: 3px;
+  border-color: rgb(176, 86, 21);
+  border-radius: 5px;
+}
+
+.container option{
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
 .homeButton{
   position: absolute;
   width: 7vh;
@@ -60,6 +76,9 @@ h4{
   cursor: pointer;
 }
 
+.container p{
+  font-size: 1.5rem;
+}
 
 .question{
   place-self: center;

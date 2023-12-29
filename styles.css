@@ -122,6 +122,30 @@ h4{
 }
 
 
+
+/* STYLING FOR RESULTS PAGE */
+
+.results{
+  height: 20vh;
+}
+
+.results p {
+  margin-bottom: 30vh;
+  font-size: 2.5rem;
+}
+
+.message p{
+  height: 4vh;
+  margin-bottom: 20vh;
+  font-size: 2rem;
+}
+
+.container h1{
+  font-size: 3.8rem;
+}
+
+
+
 /* SUPPORTS FOR SMALLER DEVICES */
 
 @media (max-width: 480px) {
@@ -162,6 +186,24 @@ h4{
     transform: translateX(-50%);
     user-select: none;
     cursor: pointer;
+  }
+  /* FOR TRIVIA RESULTS PAGE */
+  .results{
+    height: 10vh;
+  }
+
+  .results p {
+    margin-bottom: 30vh;
+    font-size: 2.3vh;
+  }
+
+  .message p{
+    margin-bottom: 20vh;
+    font-size: 2vh;
+  }
+
+  .container h1{
+    font-size: 3vh;
   }
 }
 

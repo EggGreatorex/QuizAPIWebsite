@@ -55,7 +55,16 @@ function getApiUrl(){
   
   } else if(category === 'sports'){
     url = 'https://opentdb.com/api.php?amount=1&category=21&type=multiple';
-}
+    
+  } else if(category === 'videogames'){
+    url = 'https://opentdb.com/api.php?amount=1&category=15&type=multiple';
+
+  } else if(category === 'computers'){
+    url = 'https://opentdb.com/api.php?amount=1&category=18&type=multiple';
+    
+  } else if(category === 'vehicles'){
+    url = 'https://opentdb.com/api.php?amount=1&category=28&type=multiple';
+  }
  return url
 };
 

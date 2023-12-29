@@ -173,7 +173,7 @@ h3{
   }
   .container {
     width: 350px;
-    font-size: 1vh;
+    font-size: 2vh;
   }
 
   .question{
@@ -206,6 +206,15 @@ h3{
     user-select: none;
     cursor: pointer;
   }
+  
+  .container h3{
+    font-size: 2vh;
+  }
+
+  .container p{
+    font-size: 2vh;
+  }
+
   /* FOR TRIVIA RESULTS PAGE */
   .results{
     height: 10vh;
@@ -255,4 +264,5 @@ h3{
   .answer button{
     width: 50px;
   }
+
 }

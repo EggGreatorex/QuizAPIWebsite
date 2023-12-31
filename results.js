@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
     // Get the integer version of the score
     score = parseInt(score, 10)
-    if (0 <= score <= 1) {
+    if (score >= 0 && score <= 1) {
       const messageContainer = document.querySelector(".message");
       messageContainer.innerHTML = `<p>Wow you aren't very good at this!</p>`;
     } else if( 1 <= score && score <= 3){

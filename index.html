@@ -20,7 +20,13 @@
       <option value="videogames">Video Games</option>
       <option value="computers">Computers</option>
       <option value="vehicles">Vehicles</option>
-      <!-- Add other options here -->
+    </select>
+
+    <p>Select a difficulty:</p>
+    <select id="difficultySelection">
+      <option value="easy" selected>Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
     </select>
     <button class="startButton" onclick="startTrivia()">Start</button>
   </div>
@@ -30,8 +36,10 @@
       // Get the selected value
       const selectedCategory = document.getElementById('categorySelection').value;
 
+      const difficultyCategory = document.getElementById('difficultySelection').value;
+
       // Navigate to the trivia.html page with the selected value as a query parameter
-      window.location.href = `trivia.html?category=${selectedCategory}`;
+      window.location.href = `trivia.html?category=${selectedCategory}&difficulty=${difficultyCategory}`;
     }
   </script>
 </body>

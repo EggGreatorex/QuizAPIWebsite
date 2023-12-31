@@ -40,37 +40,32 @@ function getApiUrl(){
   let APIurl = '';
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get('category').toLowerCase();
-  console.log(category)
+  const difficulty = urlParams.get('difficulty').toLowerCase();
+  console.log(category);
+  console.log(difficulty);
 
   if(category === 'default'){
-    url = "https://opentdb.com/api.php?amount=1&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&type=multiple`;
   } else if(category === 'animals'){
-    url =
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&category=27&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=27&type=multiple`;
 
   } else if(category === 'art'){
-    url =
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&category=25&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=25&type=multiple`;
   
   } else if(category === 'history'){
-    url =
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&category=23&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=23&type=multiple`;
   
   } else if(category === 'sports'){
-    url =
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&category=21&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=21&type=multiple`;
     
   } else if(category === 'videogames'){
-    url =
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&category=15&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=15&type=multiple`;
 
   } else if(category === 'computers'){
-    url =
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&category=18&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=18&type=multiple`;
 
   } else if(category === 'vehicles'){
-    url =
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&category=28&type=multiple";
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=28&type=multiple`;
   }
  return url
 };

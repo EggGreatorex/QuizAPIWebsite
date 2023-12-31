@@ -35,6 +35,13 @@ h3{
   border-radius: 5px;
 }
 
+#difficultySelection{
+  background-color: rgb(16, 16, 16);
+  border-width: 3px;
+  border-color: rgb(176, 86, 21);
+  border-radius: 5px;
+}
+
 .container option{
   background-color: black;
   color: rgb(255, 255, 255);
@@ -248,6 +255,10 @@ h3{
     width: 240px;
     height: 160px;
     font-size: 2vh;
+  }
+
+  h2{
+    font-size: 3vh;
   }
 
   .options{

@@ -166,6 +166,10 @@ h3{
   font-size: 2rem;
 }
 
+.playAgainButton{
+  margin-bottom: 2vh;
+}
+
 .container h1{
   font-size: 3.8rem;
 }

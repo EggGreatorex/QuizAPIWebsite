@@ -66,6 +66,18 @@ function getApiUrl(){
 
   } else if(category === 'vehicles'){
     url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=28&type=multiple`;
+  
+  } else if(category === 'books'){
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=10&type=multiple`;
+  
+  } else if(category === 'films'){
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=11&type=multiple`;
+  
+  } else if(category === 'television'){
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=14&type=multiple`;
+  
+  } else if(category === 'boardgames'){
+    url = `https://opentdb.com/api.php?amount=1&difficulty=${difficulty}&category=16&type=multiple`;
   }
  return url
 };

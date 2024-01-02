@@ -137,18 +137,28 @@ function checkAnswer(selectedOption) {
   btn4.disabled = true;
 
 
-  // Compare selected option with correct answer index
+  // COMPARE CORRECT ANSWER WITH THE USERS ANSWER
+  // CHANGE PAGE STYLING DEPENDENT ON THE USER'S ANSWER
   if (selectedOption === correctAnswerIndex + 1) {
     increaseScore();
     alreadyAdded = true;
     options.style.backgroundColor = "green";
     question.style.backgroundColor = "green";
+
+    // PLAY SOUND FOR CORRECT ANSWER
+    const correctSound = new Audio("./sounds/correct.mp3");
+    correctSound.play();   
+
   } else {
     let correctButton = document.querySelector(`.btn${correctAnswerIndex + 1}`);
     correctButton.style.backgroundColor = "green";
 
     options.style.backgroundColor = "red";
     question.style.backgroundColor = "red";
+
+    // PLAY SOUND FOR INCORRECT ANSWER
+    const incorrectSound = new Audio("./sounds/incorrect.mp3");
+    incorrectSound.play()
   }
 
   increaseRoundCount();
